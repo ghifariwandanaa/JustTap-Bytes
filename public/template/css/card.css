@@ -1,0 +1,118 @@
+body {
+    background-image: url("/template/images/logo-pattern.png");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.card {
+    background-color: #fff;
+    border-radius: 30px;
+    width: 80%; 
+    padding: 5%; 
+    box-sizing: border-box;
+    box-shadow: 0px 10px 30px rgb(3, 3, 3);
+}
+.card h1 {
+    margin: 0;
+    /* font-size: 55px;  */
+    font-size: 4vw; 
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px; 
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.info img {
+    width: 7%;
+    margin-right: 15px;
+}
+.info p {
+    /* font-size: 30px; */
+    font-size: 3vw;
+    margin-right: auto;
+}
+.info a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 3% 5%; /* Menggunakan persentase untuk padding */
+    border-radius: 0.5rem; /* Menggunakan rem untuk border-radius */
+    transition: background-color 0.3s ease;
+    width: 15%; /* Menggunakan persentase untuk width */
+    height: 30%; /* Menggunakan rem untuk height */
+    text-align: center;
+    font-size: 1.7vw;
+    line-height: 15%; /* Menggunakan rem untuk line-height */
+}
+
+.info a:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        background-image: url("/template/images/logo-pattern.png");
+        background-repeat: repeat;
+        background-size: 100px 100px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 30px;
+        width: 80%; 
+        padding: 5%; 
+        box-sizing: border-box;
+        box-shadow: 0px 10px 30px rgb(3, 3, 3);
+    }
+    .card h1 {
+        margin: 0;
+        font-size: 55px; 
+        border-bottom: 1px solid #000;
+        padding-bottom: 15px; 
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .info img {
+        width: 55px;
+        margin-right: 15px;
+    }
+    .info p {
+        font-size: 30px;
+        margin-right: auto;
+    }
+    .info a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        width: 125px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 22px;
+    }
+    .info a:hover {
+        background-color: #0056b3;
+    }
+}
