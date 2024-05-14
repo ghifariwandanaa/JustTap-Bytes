@@ -7,6 +7,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\CardDetailController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QrCodeController;
+use App\Http\Controllers\GifController;
 
 Route::group(['middleware' => ['guest']], function () {
     /**
@@ -34,10 +35,6 @@ Route::group(['middleware' => ['auth']], function () {
      */
     Route::post('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
 
-    Route::get('/', function () {
-        return view('dashboard.index');
-    });
-
     /**
      * Business Card Routes
      */
@@ -53,4 +50,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/card/display/{id}', [CardDetailController::class, 'display'])->name('card.display');
 
-Route::get('test', fn () => phpinfo());
+Route::get('/', function () {
+    return view('dashboard.index');
+});
