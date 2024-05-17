@@ -101,7 +101,7 @@
                                     <div class="text-center">
                                         <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Fleksibilitas Tak Terbatas</h3>
-                                        <p class="text-muted mb-0">Jelajahi Fleksibilitasnya: Temukan Fitur NFT dan Pemindaian Kode QR!</p>
+                                        <p class="text-muted mb-0">Jelajahi Fleksibilitasnya: Temukan Fitur NFC dan Pemindaian Kode QR!</p>
                                     </div>
                                 </div>
                             </div>
@@ -171,18 +171,43 @@
                 </div>
             </div>
         </section>
-        <!-- Call to action section-->
-        <section class="cta">
-            <div class="cta-content">
-                <div class="container px-5">
-                    <h2 class="text-white display-1 lh-1 mb-4">
-                        Stop waiting.
-                        <br />
-                        Start building.
-                    </h2>
+
+        {{-- Section Contoh Produk --}}
+        <section class="features">
+            <div class="h2 fs-1 text-black mb-4 text-center">
+                Our Product
+            </div>
+            <div class="row-sm">
+                <div class="col-sm">
+                    <!-- Feature item-->
+                    <div class="text-center">
+                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCBusinessCard.png" alt="..." />
+                        <h3 class="font-alt">Kartu Bisnis NFC</h3>
+                        <p class="text-muted mb-0">Kartu bisnis NFC dengan bahan berkualitas.</p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <!-- Feature item-->
+                    <div class="text-center">
+                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCNameTag.png" alt="..." />
+                        <h3 class="font-alt">Kartu Nama NFC</h3>
+                        <p class="text-muted mb-0">Kartu nama NFC dengan bahan kertas.</p>
+                    </div>
+                </div>
+            </div>
+            <div >
+                <div >
+                    <!-- Feature item-->
+                    <div class="text-center">
+                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCTag.png" alt="..." />
+                        <h3 class="font-alt">NFC Koin</h3>
+                        <p class="text-muted mb-0">Koin NFC yang cocok untuk ditempelkan pada barangmu.</p>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        
         <!-- App badge section-->
         <section class="bg-gradient-primary-to-secondary" id="contactUs">
             <div class="container px-5">
