@@ -111,7 +111,7 @@
                                     <div class="text-center">
                                         <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Pilihan Variasi Luas</h3>
-                                        <p class="text-muted mb-0">Pilih Sesuai Selera: Stiker, Kartu Nama, dan Kartu Bisnis yang Memikat!</p>
+                                        <p class="text-muted mb-0">Pilih Sesuai Selera: Stiker, Coin, dan Kartu Bisnis yang Memikat!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -162,7 +162,7 @@
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                     <div class="col-12 col-lg-5">
                         <h2 class="display-4 lh-1 mb-4">Enter a New Age of Networking</h2>
-                        <p class="lead fw-normal text-muted mb-5 mb-lg-0">BytesCompany adalah pelopor dalam solusi kartu bisnis modern. Dari kartu nama hingga NFC tag, kami menyediakan produk berkualitas tinggi untuk meningkatkan kesan pertama Anda dan memperluas jaringan bisnis Anda.</p>
+                        <p class="lead fw-normal text-muted mb-5 mb-lg-0">BytesCompany adalah pelopor dalam solusi kartu bisnis modern. Dari kartu bisnis hingga NFC tag, kami menyediakan produk berkualitas tinggi untuk meningkatkan kesan pertama Anda dan memperluas jaringan bisnis Anda.</p>
                     </div>
                     <div class="col-sm-8 col-md-6">
                         <div class="px-5 px-sm-0">
@@ -181,17 +181,17 @@
                 <div class="col-sm">
                     <!-- Feature item-->
                     <div class="text-center">
-                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCBusinessCard.png" alt="..." />
-                        <h3 class="font-alt">Kartu Bisnis NFC</h3>
+                        <img class="img-product" style="margin-top: 10px" src="{{asset('landingpage')}}/assets/img/NFCBusinessCard.png" alt="..." />
+                        <h3 class="font-alt">Justap Card</h3>
                         <p class="text-muted mb-0">Kartu bisnis NFC dengan bahan berkualitas.</p>
                     </div>
                 </div>
                 <div class="col-sm">
                     <!-- Feature item-->
                     <div class="text-center">
-                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCNameTag.png" alt="..." />
-                        <h3 class="font-alt">Kartu Nama NFC</h3>
-                        <p class="text-muted mb-0">Kartu nama NFC dengan bahan kertas.</p>
+                        <img class="img-product" style="margin-top: 10px" src="{{asset('landingpage')}}/assets/img/NFCNameTag.png" alt="..." />
+                        <h3 class="font-alt">Magic Sticker</h3>
+                        <p class="text-muted mb-0">Sticker NFC yang fleksibel dan cocok untuk ditempelkan dimana saja.</p>
                     </div>
                 </div>
             </div>
@@ -199,9 +199,9 @@
                 <div >
                     <!-- Feature item-->
                     <div class="text-center">
-                        <img class="img-product" src="{{asset('landingpage')}}/assets/img/NFCTag.png" alt="..." />
-                        <h3 class="font-alt">NFC Koin</h3>
-                        <p class="text-muted mb-0">Koin NFC yang cocok untuk ditempelkan pada barangmu.</p>
+                        <img class="img-product" style="margin-top: 10px" src="{{asset('landingpage')}}/assets/img/NFCTag.png" alt="..." />
+                        <h3 class="font-alt">Justap Coin</h3>
+                        <p class="text-muted mb-0">Koin NFC untuk ditempelkan pada barangmu.</p>
                     </div>
                 </div>
             </div>
