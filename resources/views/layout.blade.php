@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{{asset('admin')}}/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{asset('admin')}}/images/favicon.png" />
+  {{-- Untuk dashboar admin --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <div class="container-scroller">

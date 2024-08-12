@@ -9,11 +9,23 @@ use Illuminate\Support\Str;
 class BusinessCardController extends Controller
 {
     // Menampilkan semua kartu nama
-    public function index()
+    public function index(Request $request)
     {
-        $businessCards = BusinessCard::all();
-        return view('business_cards.index', compact('businessCards'));
+        $search = $request->get('search');
+        $perPage = $request->get('per_page', 10); // Default 10 data per halaman
+        $sortBy = $request->get('sort_by', 'nama'); // Default sorting by 'nama'
+        $sortDirection = $request->get('sort_direction', 'asc'); // Default sorting direction 'asc'
+
+        $businessCards = BusinessCard::when($search, function ($query, $search) {
+            return $query->where('nama', 'like', '%' . $search . '%');
+        })
+            ->orderBy($sortBy, $sortDirection)
+            ->paginate($perPage);
+
+        return view('business_cards.index', compact('businessCards', 'search', 'perPage', 'sortBy', 'sortDirection'));
     }
+
+
 
     // Menampilkan form untuk membuat kartu nama baru
     public function create()
