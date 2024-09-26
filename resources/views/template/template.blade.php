@@ -17,6 +17,12 @@
             <button class="primary-text" onclick="window.location.href='https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to={{ $businessCard->email }}'">Email</button>
             <button class="primary-text" onclick="window.location.href='https://instagram.com/{{ $businessCard->instagram }}'">Instagram</button>
             <button class="primary-text" onclick="window.location.href='https://www.linkedin.com/search/results/all/?keywords={{ urlencode($businessCard->linkedin) }}&origin=TYPEAHEAD_ESCAPE_HATCH&sid=vYq'">LinkedIn</button>
+            
+            <!-- Tombol Custom Link hanya ditampilkan jika ada custom_link -->
+            @if ($businessCard->custom_link)
+                <button class="primary-text" onclick="window.location.href='{{ $businessCard->custom_link }}'">Lainnya</button>
+            @endif
+
             <div class="logo">
                 <img style="height:50px; width:auto" src="{{asset('template')}}/images/logo-pattern.png" onclick="window.location.href='https://bytes.biz.id'"></img>
             </div>

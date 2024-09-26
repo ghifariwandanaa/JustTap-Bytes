@@ -25,8 +25,6 @@ class BusinessCardController extends Controller
         return view('business_cards.index', compact('businessCards', 'search', 'perPage', 'sortBy', 'sortDirection'));
     }
 
-
-
     // Menampilkan form untuk membuat kartu nama baru
     public function create()
     {
@@ -40,13 +38,14 @@ class BusinessCardController extends Controller
             'nama' => 'required',
             'nomor_telepon' => 'required',
             'email' => 'required|email',
+            'custom_link' => 'nullable|url', // Menambahkan validasi untuk custom_link
             // tambahkan validasi lainnya sesuai kebutuhan
         ]);
 
         // Buat kartu nama baru dengan UUID sebagai ID
         $businessCard = new BusinessCard();
         $businessCard->id = Str::uuid()->toString(); // Menggunakan UUID sebagai ID
-        $businessCard->fill($request->all());
+        $businessCard->fill($request->all()); // Mengisi semua field dari request
         $businessCard->save();
 
         return redirect()->route('business_cards.index')
@@ -60,14 +59,12 @@ class BusinessCardController extends Controller
         return view('business_cards.show', compact('businessCard'));
     }
 
-
     // Menampilkan form untuk mengedit kartu nama
     public function edit($id)
     {
         $businessCard = BusinessCard::findOrFail($id);
         return view('business_cards.edit', compact('businessCard'));
     }
-
 
     // Mengupdate kartu nama yang ada di database
     public function update(Request $request, BusinessCard $businessCard)
@@ -76,10 +73,11 @@ class BusinessCardController extends Controller
             'nama' => 'required',
             'nomor_telepon' => 'required',
             'email' => 'required|email',
+            'custom_link' => 'nullable|url', // Menambahkan validasi untuk custom_link
             // tambahkan validasi lainnya sesuai kebutuhan
         ]);
 
-        $businessCard->update($request->all());
+        $businessCard->update($request->all()); // Memperbarui semua field dari request
 
         return redirect()->route('business_cards.index')
             ->with('success', 'Kartu nama berhasil diperbarui.');

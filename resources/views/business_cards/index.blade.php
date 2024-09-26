@@ -63,6 +63,14 @@
                         </a>
                      </th>
                      <th>
+                        <a href="{{ route('business_cards.index', ['sort_by' => 'custom_link', 'sort_direction' => ($sortBy == 'custom_link' && $sortDirection == 'asc') ? 'desc' : 'asc']) }}">
+                        Custom Link
+                        @if ($sortBy == 'custom_link')
+                        <i class="fas fa-sort-{{ $sortDirection == 'asc' ? 'up' : 'down' }}"></i>
+                        @endif
+                        </a>
+                     </th>
+                     <th>
                         <a href="{{ route('business_cards.index', ['sort_by' => 'expired_at', 'sort_direction' => ($sortBy == 'expired_at' && $sortDirection == 'asc') ? 'desc' : 'asc']) }}">
                         Status
                         @if ($sortBy == 'expired_at')
@@ -81,6 +89,13 @@
                      <td>{{ $businessCard->email }}</td>
                      <td>{{ $businessCard->instagram }}</td>
                      <td>{{ $businessCard->linkedin }}</td>
+                     <td>
+                        @if ($businessCard->custom_link)
+                           <a>Terdapat Custom Link</a>
+                        @else
+                           -
+                        @endif
+                     </td>
                      <td>{{ $businessCard->expired_at ? ($businessCard->expired_at < now() ? 'Sudah Expired' : 'Belum Expired') : 'Tanpa Batas' }}</td>
                      <td>
                         <div class="btn-group" role="group" aria-label="Basic example">

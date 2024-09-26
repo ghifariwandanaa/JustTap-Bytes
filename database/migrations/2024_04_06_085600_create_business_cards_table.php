@@ -20,6 +20,7 @@ class CreateBusinessCardsTable extends Migration
             $table->string('email');
             $table->string('instagram')->nullable();
             $table->string('linkedin')->nullable();
+            $table->string('custom_link')->nullable(); // Kolom custom_link baru
             $table->dateTime('expired_at')->nullable();
             $table->timestamps();
         });
